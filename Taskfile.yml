@@ -1,0 +1,22 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: run
+
+  run:
+    desc: Build and run the CLI
+    cmds:
+      - go run main.go
+
+  build:
+    desc: Build the CLI
+    cmds:
+      - go build
+
+  install:
+    desc: Install dependencies required to build this app
+    cmds:
+      - go mod tidy
+
